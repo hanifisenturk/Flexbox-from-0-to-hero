@@ -116,13 +116,44 @@
           
         </div>
             <p>flex-flow: column wrap-reverse </p>
-        <div style="height:300px" class="container flex-flow6">
+        <div style="height:300px;" class="container flex-flow6">
           <div class="flex-item">A</div>
           <div class="flex-item">B</div>
           <div class="flex-item">C</div>
         </div>
         <p>There are lots of combinations to use "flex-flow" property.</p>
         <p><strong>Flex flow property can be used "flex-direction" or "flex-wrap" alone.</strong></p>
+</section>
+<section class="item-container">
+<p class="section-title">FLEX ITEMS</p>
+<p>Flex items are the direct children of the flex container.</p>
+<p class="sub-title">FLEX BASIS</p>
+<code class="possible-values">flex-basis: auto | content | width | height;</code>
+<p>The "flex-basis" property defines the main size of the item initially.</p>
+<p>flex-basis: auto(by default); (It uses the main size of the element and defines it as a size. In this case every item has 100px width. Therefore, flex-basis: 100px;)</p>
+<div  class="container">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p>When items have not <strong>*main size</strong>, <strong>auto</strong> will fall back to <strong>content</strong>. That means that items will have width or
+        height that they need. </p>
+<div  class="container">
+          <div class="flex-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, aspernatur? Architecto aut, aliquid eveniet molestias ex est rerum sed beatae, alias blanditiis ducimus perferendis quae? Sunt, unde dicta. Soluta, rem.</div>
+          <div class="flex-item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis quisquam sit animi totam magnam soluta ut earum ipsam?</div>
+          <div class="flex-item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta maiores reiciendis eveniet </div>
+        </div>
+        <p><strong>* Main size means that if container's direction is row or row-reverse, it will be width. Otherwise it will be height.</strong></p>
+        <p>flex-basis: 200px; (Added to every item.) As you see all items have same width (200px) despite their content's difference.</p>
+        <div  class="container">
+          <div style="flex-basis: 200px;" class="flex-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, aspernatur? Architecto aut, aliquid eveniet molestias ex est rerum sed beatae, alias blanditiis ducimus perferendis quae? Sunt, unde dicta. Soluta, rem.</div>
+          <div style="flex-basis: 200px;"class="flex-item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis quisquam sit animi totam magnam soluta ut earum ipsam?</div>
+          <div style="flex-basis:200px" class="flex-item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta maiores reiciendis eveniet </div>
+        </div>
+<p><strong>Item size has a priority! That means that even though flex-basis is set to auto or content, item size will be used as a flex-basis value if it exists.</strong></p>
+<p class="sub-title">FLEX GROW</p>
+<code class="possible-values">flex-grow: number[0,∞];</code>   
+
 </section>
     </main>
   </body>

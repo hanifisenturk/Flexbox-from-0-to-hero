@@ -85,6 +85,15 @@ p {
   user-select: none;
 }
 
+.flex-item2 {
+  background: #3498db;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  user-select: none;
+  margin-bottom: 1rem;
+}
+
 /* ENDING OF THE MAIN AXIS  */
 
 /* BEGINNING OF THE FLEX CONTAINER */
