@@ -4,8 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flexbox from 0 to hero!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="axis">
+        <p class="section-title">AXIS</p>
+        <p class="sub-title">MAIN AXIS</p>
+        <p class="possible-values">
+          flex-direction: row | row-reverse | column | column-reverse
+        </p>
+        <p>"flex-direction" property set "row" by default.</p>
+        <div class="flex-container row">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p>
+          flex-direction: row-reverse; (It orders the items reversely in the
+          horizontal direction.)
+        </p>
+        <div class="flex-container row-reverse">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p>
+          flex-direction: column; (It orders the items in the vertical
+          direction.)
+        </p>
+        <div class="flex-container column">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+
+        <p>
+          flex-direction: column-reverse; (It orders the items reversely in the
+          vertical direction.)
+        </p>
+        <div class="flex-container column-reverse">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p class="sub-title">CROSS AXIS</p>
+        <p>Cross axis is the axis that is perpendicular to the main axis.
+          In case your main axis is "row | row-reverse", cross axis will be "column | column-reverse" and vice versa. </p>
+        </p>
+
+        <p class="sub-title">START AND END LINES</p>
+        <p>Start and End lines are changeable lines that depends on the language's writing direction which you use in your device.</p>
+     
+</section>
+<section class="flex-container">
+   <p class="section-title">FLEX CONTAINER</p>
+</section>
+    </main>
+  </body>
 </html>
