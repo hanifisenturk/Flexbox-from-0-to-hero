@@ -41,6 +41,7 @@ p {
   font-size: 3rem;
   font-weight: bolder;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .sub-title {
@@ -49,12 +50,11 @@ p {
   margin-bottom: 1rem;
 }
 
-/* MAIN AXIS */
-
-.flex-container {
+.container {
   display: flex;
-  margin-bottom: 2.4rem;
 }
+
+/* BEGINNING OF THE AXIS */
 
 .row {
   flex-direction: row;
@@ -85,4 +85,8 @@ p {
   user-select: none;
 }
 
-/* MAIN AXIS */
+/* ENDING OF THE MAIN AXIS  */
+
+/* BEGINNING OF THE FLEX CONTAINER */
+
+/* ENDING OF THE FLEX CONTAINER */
