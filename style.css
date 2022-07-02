@@ -52,6 +52,8 @@ p {
 
 .container {
   display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* BEGINNING OF THE AXIS */
@@ -77,21 +79,17 @@ p {
   width: 20rem;
   height: 10rem;
   background-color: #3498db;
-  margin-right: 1rem;
   font-size: 3.2rem;
   color: #fff;
   text-align: center;
-  margin-bottom: 1rem;
   user-select: none;
 }
 
 .flex-item2 {
   background: #3498db;
-  margin-right: 1rem;
   font-size: 1.2rem;
   color: #fff;
   user-select: none;
-  margin-bottom: 1rem;
 }
 
 /* ENDING OF THE MAIN AXIS  */

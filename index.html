@@ -122,7 +122,7 @@
           <div class="flex-item">C</div>
         </div>
         <p>There are lots of combinations to use "flex-flow" property.</p>
-        <p><strong>Flex flow property can be used "flex-direction" or "flex-wrap" alone.</strong></p>
+        <p><strong>Flex flow property can be used with "flex-direction" or "flex-wrap" values alone.</strong></p>
 </section>
 <section class="item-container">
 <p class="section-title">FLEX ITEMS</p>
@@ -152,8 +152,14 @@
         </div>
 <p><strong>Item size has a priority! That means that even though flex-basis is set to auto or content, item size will be used as a flex-basis value if it exists.</strong></p>
 <p class="sub-title">FLEX GROW</p>
-<code class="possible-values">flex-grow: number[0,∞];</code>   
-
+<code class="possible-values">flex-grow: number[0,∞]; (default 0)</code>
+<p>Thanks to "flex-grow" property, we can grow the items <strong>proportionally</strong> from their "flex-basis" values.</p>   
+<div class="container">
+          <div style="flex-grow: 2; font-size: 1.8rem;" class="flex-item2">flex-grow:2</div>
+          <div style="flex-grow: 1; font-size: 1.8rem;" class="flex-item2">flex-grow:1</div>
+          <div style="flex-grow: 1; font-size: 1.8rem;" class="flex-item2">flex-grow:1</div>
+        </div>
+        <p>As you see, the first element takes up bigger space than others.(2 times bigger.)</p>
 </section>
     </main>
   </body>
