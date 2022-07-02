@@ -41,6 +41,7 @@ p {
   font-size: 3rem;
   font-weight: bolder;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .sub-title {
@@ -49,12 +50,11 @@ p {
   margin-bottom: 1rem;
 }
 
-/* MAIN AXIS */
-
-.flex-container {
+.container {
   display: flex;
-  margin-bottom: 2.4rem;
 }
+
+/* BEGINNING OF THE AXIS */
 
 .row {
   flex-direction: row;
@@ -85,4 +85,38 @@ p {
   user-select: none;
 }
 
-/* MAIN AXIS */
+/* ENDING OF THE MAIN AXIS  */
+
+/* BEGINNING OF THE FLEX CONTAINER */
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-flow1 {
+  flex-flow: row nowrap;
+}
+
+.flex-flow2 {
+  flex-flow: row wrap;
+}
+
+.flex-flow3 {
+  flex-flow: row wrap-reverse;
+}
+
+.flex-flow4 {
+  flex-flow: column nowrap;
+}
+
+.flex-flow5 {
+  flex-flow: column wrap;
+}
+
+.flex-flow6 {
+  flex-flow: column wrap-reverse;
+}
+/* ENDING OF THE FLEX CONTAINER */
