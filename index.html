@@ -64,10 +64,64 @@
    <p class="sub-title">INLINE FLEX</p>      
    <p>inline-flex property set the container an inline-block element, you can still set width,height or padding values like a block element has. It continues to behave like flex container.</p> 
    <p class="sub-title">FLEX WRAP</p>
-   <p class="possible-values">flex-wrap: no-wrap | wrap | wrap-reverse;</p>
-   <p>In order to use the "flex-wrap" property effectively, flex items (will be talked about later) should be too large to display them in one line. Maybe we do not want to shrink them in one line as well.</p>
-
-
+   <code class="possible-values">flex-wrap: no-wrap | wrap | wrap-reverse;</code>
+   <p>In order to use the "flex-wrap" property effectively, flex items (will be talked about later) should be too large to display them in one line.</p>
+   <p>Another usage of "flex-wrap" property is to protect the flex items' exact width. It can be used when we do not want to shrink them in the main axis.</p>
+  <hr style="margin-bottom: 2.4rem;">
+  <p>"flex-wrap": wrap;</p>
+      <div class="container row wrap">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+         <p>"flex-wrap": wrap-reverse; (It also behaves like "wrap" but the container's <strong>*cross-start</strong>  and <strong>*cross-end</strong> are changed.</p>
+         <p>* cross-start and cross-end values depend on the "flex-direction" value.</p>
+      <div class="container row wrap-reverse">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p class="sub-title">FLEX FLOW</p>
+        <code class="possible-values">flex-flow: row nowrap | column nowrap | column-reverse wrap-reverse etc</code>
+        <p>"flex-flow" is a shorthand property that we can specify the direction of container and its wrap situation.</p>
+        <p>flex-flow: row nowrap</p>
+        <div class="container flex-flow1">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p>flex-flow: row wrap</p>
+        <div class="container flex-flow2">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+          <p>flex-flow: row wrap-reverse</p>
+        <div class="container flex-flow3">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+         <p>flex-flow: column nowrap </p>
+        <div class="container flex-flow4">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+         <p>flex-flow: column wrap </p>
+        <div class="container flex-flow5">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+            <p>flex-flow: column wrap-reverse </p>
+        <div class="container flex-flow6">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <p>There are lots of combinations to use "flex-flow" property.</p>
+        <p><strong>Flex flow property can be used "flex-direction" or "flex-wrap" alone.</strong></p>
 </section>
     </main>
   </body>
