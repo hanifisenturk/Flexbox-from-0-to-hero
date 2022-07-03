@@ -162,7 +162,7 @@
         <p>As you see, the first element takes up bigger space than others.(2 times bigger.)</p>
           <p class="sub-title">FLEX SHRINK</p>
 <code class="possible-values">flex-shrink: number[0,∞]; (default 1)</code>
-          <p>"flex-shrink" property allows us to <strong>shrink</strong> items proportionally from their <strong>flex-basis</strong> values.</p>
+          <p>"flex-shrink" property allows us to <strong>shrink</strong> items proportionally from their <strong>flex-basis</strong> values. It only works when the total size of the items <strong>overflows</strong> the main axis. Otherwise do not.</p>
 <div  class="container">
           <div style=" width: 100%; flex-shrink: 4; font-size: 1.8rem; " class="flex-item2">flex-shrink:4</div>
           <div style=" width: 100%;flex-shrink: 2;font-size: 1.8rem; " class="flex-item2">flex-shrink:2</div>
@@ -173,7 +173,50 @@
         <p class="section-title">FLEX SHORTHAND</p>
         <code class="possible-values">flex-grow | flex-shrink | flex-basis</code>
         <p>Flex shorthand property is used to set all flex properties at once.</p>
-        </section>
+        <p>flex: 1 1 auto; </p>
+        <div class="container">
+          <div style="flex:1 1 auto;  font-size: 1.8rem; " class="flex-item2">flex: 1 1 auto;</div>
+          <div style="flex:1 1 auto; font-size: 1.8rem; " class="flex-item2">flex: 1 1 auto;</div>
+          <div style="flex:1 1 auto;  font-size: 1.8rem;" class="flex-item2">flex: 1 1 auto;</div>
+        </div>
+      <p>While the first item has flex: 2 1 auto, others have flex: 1 1 auto.</p>
+        <div class="container">
+          <div style="flex:2 1 auto;  font-size: 1.8rem; " class="flex-item2">flex: 2 1 auto;</div>
+          <div style="flex:1 1 auto; font-size: 1.8rem; " class="flex-item2">flex: 1 1 auto;</div>
+          <div style="flex:1 1 auto;  font-size: 1.8rem;" class="flex-item2">flex: 1 1 auto;</div>
+        </div>
+       <code class="possible-values">flex: initial;</code> 
+       <p>This value helps us to reset the item to its initial flexbox values. In this case, flex-grow:0, flex-shrink:1 and flex-basis value will be <strong>auto</strong>.</p>
+        <div class="container">
+          <div style="flex:initial;  font-size: 1.8rem; " class="flex-item2">flex: initial;</div>
+          <div style="flex:initial; font-size: 1.8rem; " class="flex-item2">flex: initial;</div>
+          <div style="flex:initial;  font-size: 1.8rem;" class="flex-item2">flex: initial;</div>
+        </div>
+        <code class="possible-values">
+          flex:auto;
+        </code>
+        <p>It is the copy of flex: 1 1 auto. In this case items can grow or shrink if they need. Because our first value (flex-grow) is 1. Therefore it can <strong>grow</strong> if there is a <strong>enough space</strong> to grow. It can also <strong>shrink</strong> if items main size <strong>overflows</strong> the main axis.</p>
+      <div class="container">
+          <div style="flex:auto;  font-size: 1.8rem; " class="flex-item2">flex: auto;</div>
+          <div style="flex:auto; font-size: 1.8rem; " class="flex-item2">flex: auto;</div>
+          <div style="flex:auto;  font-size: 1.8rem;" class="flex-item2">flex: auto;</div>
+        </div>
+
+      <code class="possible-values">flex:none;</code>
+      <p>It is flex: 0 0 auto. Items <strong> are not able to </strong> grow or shrink, but as flex-basis value is auto, it can use items main size if they have, otherwise it can use items' content sizes.</p>
+      <div class="container">
+          <div style="flex:none;  font-size: 1.8rem; " class="flex-item2">flex: none;</div>
+          <div style="flex:none; font-size: 1.8rem; " class="flex-item2">flex: none;</div>
+          <div style="flex:none;  font-size: 1.8rem;" class="flex-item2">flex: none;</div>
+        </div>
+        <code class="possible-values">flex: 1; flex:2; and so on...</code>
+        <p>This behaves like as if you were using <strong>flex: 1 1 0 (flex:1;)</strong>, <strong>flex: 2 1 0 (flex:2;)</strong>...</p>
+        <div class="container">
+          <div style="flex:1;  font-size: 1.8rem; " class="flex-item2">flex: 1;</div>
+          <div style="flex:2; font-size: 1.8rem; " class="flex-item2">flex: 2;</div>
+          <div style="flex:1;  font-size: 1.8rem;" class="flex-item2">flex: 1;</div>
+        </div>
+    </section>
 
     </main>
   </body>
