@@ -162,7 +162,7 @@
         <p>As you see, the first element takes up bigger space than others.(2 times bigger.)</p>
           <p class="sub-title">FLEX SHRINK</p>
 <code class="possible-values">flex-shrink: number[0,∞]; (default 1)</code>
-          <p>"flex-shrink" property allows us to <strong>shrink</strong> items proportionally from their <strong>flex-basis</strong> values.</p>
+          <p>"flex-shrink" property allows us to <strong>shrink</strong> items proportionally from their <strong>flex-basis</strong> values. It only works when total size of the items <strong>overflows</strong> the main axis. Otherwise do not.</p>
 <div  class="container">
           <div style=" width: 100%; flex-shrink: 4; font-size: 1.8rem; " class="flex-item2">flex-shrink:4</div>
           <div style=" width: 100%;flex-shrink: 2;font-size: 1.8rem; " class="flex-item2">flex-shrink:2</div>
