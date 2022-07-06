@@ -217,7 +217,120 @@
           <div style="flex:1;  font-size: 1.8rem;" class="flex-item2">flex: 1;</div>
         </div>
     </section>
+<section class="measuring-operations">
+<p class="section-title">ALIGNING,JUSTIFICATION,SPACE DISTRUBITION</p>
+<p class="sub-title">ALIGN ITEMS</p>
+<code class="possible-values">align-items: stretch (default) | flex-start | flex-end | center | baseline</code>
+<p>We can align the items on the <strong>cross axis</strong> with the help of this property.</p>
+<code class="possible-values">align-items: stretch;</code>
+  <div style="border: 3px dashed red;" class="container">
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">1</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
+        <p>Items are streched to height of the <strong>flex container</strong> by default.</p>
+        
+        <p>In the following example, the flex container has 150px height. As you see, items are stretched to the flex container's height. As we set the <strong>"box-sizing"</strong> property to <strong>"border-box"</strong> in the CSS file's <strong>root (*)</strong> selector, we have 3px border width and the container's total height is 150px with that border width. That is why the items have 144px height.</p>
+         <div style="height: 15rem; border: 3px dashed red;" class="container">
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">1</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
 
+        <p>If the container's height is not defined, items are stretched to the <strong>tallest element's height</strong>. In the following example, the flex container's height was not defined. The first item has 150px height. Other items' height were not defined. Without setting a height value to the items, this situation will depend on the <strong>item's content</strong>.</p>
+         <div style="border: 3px dashed red;" class="container">
+          <div style="font-size: 1.8rem; padding: 2.4rem; height: 20rem;" class="flex-item2">1</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
+        
+        <code class="possible-values">
+          align-items: flex-start flex-end center;
+        </code>
+        
+        <p>Items are lined up at the start of the <strong>cross axis</strong> by using the "flex-start" value.</p>
+           <div style="height: 20rem; align-items: flex-start; border: 3px dashed red;" class="container">
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">1</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
+
+        
+        <p>Items are centered at center of the <strong>cross axis</strong> by using the "center" value.</p>
+           <div style="height: 20rem; align-items: center; border: 3px dashed red;" class="container">
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">1</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
+
+        
+        <p>Items are aligned at the end of the <strong>cross axis</strong> by using the "flex-end" value.</p>
+           <div style="height: 20rem; align-items: flex-end; border: 3px dashed red;" class="container">
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">1</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
+
+        <p>Items are aligned along their <strong>content's baseline</strong> by using the "baseline" value.</p>
+          <div style="height: 20rem; align-items: baseline; border: 3px dashed red;" class="container">
+          <div style="font-size: 6.4rem; padding: 2.4rem;" class="flex-item2">1</div>
+          <div style="font-size: 3.2rem; padding: 2.4rem;" class="flex-item2">2</div>
+          <div style="font-size: 1.8rem; padding: 2.4rem;" class="flex-item2">3</div>
+        </div>
+        <p>Baseline: The line upon which most letters "sit" and below which descenders extend. <a href="https://en.wikipedia.org/wiki/Baseline_(typography)">Wikipedia</a></p>
+         <img alt="An image shows us the principal line terms in typography." src="https://i.stack.imgur.com/bNwiG.png" >
+        <p><strong>Photo: The principal line terms in typography. (via Wikipedia)</strong></p>
+        <p>In order to understand the difference between the <strong>"flex-start"</strong> and <strong>the "baseline"</strong> properties, items' content sizes should be different from each other. The baseline element is determined by <strong>the tallest</strong> item in the container. For more information: <a href="https://www.w3.org/TR/css-flexbox-1/#valdef-align-items-baseline">W3C Document</a></p>
+       
+        <p class="sub-title">JUSTIFY-CONTENT</p>
+        <code class="possible-values">justify-content: center | flex-start (default) | flex-end | space-around | space-between | space-evenly </code>
+        <p>We can align the items on the <strong>main</strong> with the help of this property.</p>
+        <code class="possible-values">justify-content: flex-start; (default)</code>
+         <p>Items are aligned at the start of the <strong>main axis</strong> by using the "flex-start" value.</p>
+        <div style=" height: 15rem; justify-content: flex-start; border: 3px solid black; gap: 0;" class="container">
+          <div style=" padding: 2.4rem; font-size: 1.8rem;" class="flex-item2">1</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">2</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">3</div>
+        </div>
+        <code class="possible-values">justify-content: center;</code>
+         <p>Items are centered on the <strong>main axis</strong> by using the "center" value.</p>
+        <div style=" height: 15rem; justify-content: center; border: 3px solid black; gap: 0;" class="container">
+          <div style=" padding: 2.4rem; font-size: 1.8rem;" class="flex-item2">1</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">2</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">3</div>
+        </div>
+        <code class="possible-values">justify-content: flex-end;</code>
+         <p>Items are aligned at the end of the <strong>main axis</strong> by using the "flex-start" value.</p>
+        <div style=" height: 15rem; justify-content: flex-end; border: 3px solid black; gap: 0;" class="container">
+          <div style=" padding: 2.4rem; font-size: 1.8rem;" class="flex-item2">1</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">2</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">3</div>
+        </div>
+        <code class="possible-values">justify-content: space-between; (default)</code>
+         <p>Items are aligned on the <strong>main axis</strong> with the equal distance between them by using the "space-between" value. The first and the last item lean either edge of the container without spacing.</p>
+        <div style=" height: 15rem; justify-content: space-between; border: 3px solid black; gap: 0;" class="container">
+          <div style=" padding: 2.4rem; font-size: 1.8rem;" class="flex-item2">1</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">2</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">3</div>
+        </div>
+
+         <code class="possible-values">justify-content: space-evenly;</code>
+         <p>Items are aligned on the <strong>main axis</strong> with the <strong>equal</strong> distance between them and between either end of the container by using the "space-evenly" value.</p>
+        <div style=" height: 15rem; justify-content: space-evenly; border: 3px solid black; " class="container">
+          <div style=" padding: 2.4rem; font-size: 1.8rem;" class="flex-item2">1</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">2</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">3</div>
+        </div>
+
+        
+         <code class="possible-values">justify-content: space-around;</code>
+         <p>Items are aligned on the <strong>main axis</strong> with the <strong>equal</strong> distance between them and the first and the last item have <strong>half-size</strong> space on either end by using the "space-around" value.</p>
+        <div style=" height: 15rem; justify-content: space-around; border: 3px solid black; " class="container">
+          <div style=" padding: 2.4rem; font-size: 1.8rem;" class="flex-item2">1</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">2</div>
+          <div style=" padding: 2.4rem; font-size: 1.8rem;;" class="flex-item2">3</div>
+        </div>
+       </section>
     </main>
   </body>
 </html>
